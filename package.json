@@ -1,0 +1,22 @@
+{
+  "name": "bugereatscy",
+  "version": "1.0.0",
+  "description": "automation tests buger eats with cypress",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arthurxii/bugerEatsCypressTests.git"
+  },
+  "author": "Arthur",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/arthurxii/bugerEatsCypressTests/issues"
+  },
+  "homepage": "https://github.com/arthurxii/bugerEatsCypressTests#readme",
+  "devDependencies": {
+    "cypress": "^12.9.0"
+  }
+}
