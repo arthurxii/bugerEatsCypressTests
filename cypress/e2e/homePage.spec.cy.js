@@ -1,4 +1,4 @@
-import homePage from '../support/pages/Home/homePage'
+import homePage from '../support/pages/Home'
 
 describe('Clicar para fazer cadastro', () => {
     beforeEach(() => {

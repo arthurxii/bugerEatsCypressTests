@@ -1,11 +1,9 @@
+const el = require ('./elements').ELEMENTS
+
 class homePage {
     acessarCadastro(){
         cy.visit('https://buger-eats.vercel.app/')
-        cy.get('#page-home > div > main > a').click()
-    }
-
-    preencherCadastro(){
-      
+        cy.get(el.btnCadastro).click()
     }
 }
 
