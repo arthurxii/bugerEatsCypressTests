@@ -18,6 +18,7 @@
   "homepage": "https://github.com/arthurxii/bugerEatsCypressTests#readme",
   "devDependencies": {
     "cypress": "^12.9.0",
-    "cypress-cucumber-preprocessor": "^4.3.1"
+    "cypress-cucumber-preprocessor": "^4.3.1",
+    "cypress-file-upload": "^5.0.8"
   }
 }
