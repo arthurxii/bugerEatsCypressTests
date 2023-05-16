@@ -1,17 +1,26 @@
 const el = require ('./elements').ELEMENTS
 import 'cypress-file-upload';
+const faker = require ('faker');
 
+const nomeCompleto = faker.name.findName()
+const cpf = faker.random.number({ min: 10000000000, max: 99999999999 }).toString()
+const email = faker.internet.email()
+const telefone = faker.phone.phoneNumber()
+const cep = faker.address.zipCode()
+const numero = faker.random.number({ min: 1, max: 9999 }).toString()
+const complemento = faker.address.secondaryAddress()
 class Cadastro {
     validarCadastro(){
         // preencher o cadastro
-        cy.get(el.iptNomeCompleto).type('Arthur Henrique')
-        cy.get(el.iptCPF).type('36134723762')
-        cy.get(el.iptEmail).type('email@teste.com')
-        cy.get(el.iptWhatsapp).type('988774422')
-        cy.get(el.iptCEP).type('01310904')
+        
+        cy.get(el.iptNomeCompleto).type(nomeCompleto)
+        cy.get(el.iptCPF).type(cpf)
+        cy.get(el.iptEmail).type(email)
+        cy.get(el.iptWhatsapp).type(telefone)
+        cy.get(el.iptCEP).type(cep)
         cy.get(el.btnBuscarCEP).click()
-        cy.get(el.iptNumero).type('10')
-        cy.get(el.iptComplemento).type('teste')
+        cy.get(el.iptNumero).type(numero)
+        cy.get(el.iptComplemento).type(complemento)
         cy.get(el.btnEntregaMoto).click()
         cy.fixture('example.jpg', 'binary').then(fileContent => {
             cy.get(el.btnFotoCNH).attachFile ({
@@ -31,14 +40,14 @@ class Cadastro {
 
     validarCadastroSemCNH(){
         // preencher o cadastro
-        cy.get(el.iptNomeCompleto).type('Arthur Henrique')
-        cy.get(el.iptCPF).type('36134723762')
-        cy.get(el.iptEmail).type('email@teste.com')
-        cy.get(el.iptWhatsapp).type('988774422')
-        cy.get(el.iptCEP).type('01310904')
+        cy.get(el.iptNomeCompleto).type(nomeCompleto)
+        cy.get(el.iptCPF).type(cpf)
+        cy.get(el.iptEmail).type(email)
+        cy.get(el.iptWhatsapp).type(telefone)
+        cy.get(el.iptCEP).type(cep)
         cy.get(el.btnBuscarCEP).click()
-        cy.get(el.iptNumero).type('10')
-        cy.get(el.iptComplemento).type('teste')
+        cy.get(el.iptNumero).type(numero)
+        cy.get(el.iptComplemento).type(complemento)
         cy.get(el.btnEntregaMoto).click()
 
         //validar o cadastro sem a CNH
@@ -48,14 +57,14 @@ class Cadastro {
 
     validarCadastroComDadosIncorretos(){
         // preencher o cadastro
-        cy.get(el.iptNomeCompleto).type('Arthur Henrique')
+        cy.get(el.iptNomeCompleto).type(nomeCompleto)
         cy.get(el.iptCPF).type('36134723762856465')
-        cy.get(el.iptEmail).type('email@teste.com')
-        cy.get(el.iptWhatsapp).type('988774422')
+        cy.get(el.iptEmail).type(email)
+        cy.get(el.iptWhatsapp).type(telefone)
         cy.get(el.iptCEP).type('01310904')
         cy.get(el.btnBuscarCEP).click()
-        cy.get(el.iptNumero).type('10')
-        cy.get(el.iptComplemento).type('teste')
+        cy.get(el.iptNumero).type(numero)
+        cy.get(el.iptComplemento).type(complemento)
         cy.get(el.btnEntregaMoto).click()
         cy.fixture('example.jpg', 'binary').then(fileContent => {
             cy.get(el.btnFotoCNH).attachFile ({
