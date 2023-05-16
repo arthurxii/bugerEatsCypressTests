@@ -9,6 +9,7 @@ const telefone = faker.phone.phoneNumber()
 const cep = faker.address.zipCode()
 const numero = faker.random.number({ min: 1, max: 9999 }).toString()
 const complemento = faker.address.secondaryAddress()
+
 class Cadastro {
     validarCadastro(){
         // preencher o cadastro
