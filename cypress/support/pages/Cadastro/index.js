@@ -13,7 +13,6 @@ const complemento = faker.address.secondaryAddress()
 class Cadastro {
     validarCadastro(){
         // preencher o cadastro
-        
         cy.get(el.iptNomeCompleto).type(nomeCompleto)
         cy.get(el.iptCPF).type(cpf)
         cy.get(el.iptEmail).type(email)
