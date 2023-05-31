@@ -1,3 +1,5 @@
+/// <reference types="Cypress" />
+
 import homePage from '../support/pages/Home'
 
 describe('Clicar para fazer cadastro', () => {

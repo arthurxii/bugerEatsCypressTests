@@ -1,3 +1,5 @@
+/// <reference types="Cypress" />
+
 const el = require ('./elements').ELEMENTS
 import 'cypress-file-upload';
 const faker = require ('faker');

@@ -1,3 +1,5 @@
+/// <reference types="Cypress" />
+
 import cadastro from '../support/pages/Cadastro'
 import homePage from '../support/pages/Home'
 
