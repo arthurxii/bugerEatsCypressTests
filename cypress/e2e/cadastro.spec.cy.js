@@ -6,6 +6,7 @@ import homePage from '../support/pages/Home'
 describe('Validar o cadastro na plataforma', () => {
     beforeEach(() => {
         homePage.acessarCadastro()
+        cy.reload()
     })
 
     it('deve realizar o cadastro', () => {
@@ -16,6 +17,7 @@ describe('Validar o cadastro na plataforma', () => {
 describe('Validar o cadastro sem a CNH', () => {
     beforeEach(() => {
         homePage.acessarCadastro()
+        cy.reload()
     })
 
     it('não deve realizar o cadastro sem a CNH', () => {
@@ -26,6 +28,7 @@ describe('Validar o cadastro sem a CNH', () => {
 describe('Validar o cadastro com dados inválidos', () => {
     beforeEach(() => {
         homePage.acessarCadastro()
+        cy.reload()
     })
 
     it('não deve realizar o cadastro com dados inválidos', () => {
