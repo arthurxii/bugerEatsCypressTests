@@ -14,7 +14,7 @@ describe('Validar o cadastro na plataforma', () => {
       })
 })
 
-describe('Validar o cadastro sem a CNH', () => {
+describe('Validar com dados invalidos', () => {
     beforeEach(() => {
         homePage.acessarCadastro()
         cy.reload()
@@ -23,15 +23,8 @@ describe('Validar o cadastro sem a CNH', () => {
     it('não deve realizar o cadastro sem a CNH', () => {
         cadastro.validarCadastroSemCNH()
       })
-})
-
-describe('Validar o cadastro com dados inválidos', () => {
-    beforeEach(() => {
-        homePage.acessarCadastro()
-        cy.reload()
-    })
 
     it('não deve realizar o cadastro com dados inválidos', () => {
         cadastro.validarCadastroComDadosIncorretos()
-      })
+    })
 })
