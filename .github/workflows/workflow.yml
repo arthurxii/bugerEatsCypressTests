@@ -1,0 +1,28 @@
+name: Testes Automatizados no BugerEats com Cypress
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout do repositório
+      uses: actions/checkout@v2
+
+    - name: Configurar o Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: 14
+
+    - name: Instalar dependências
+      run: npm install
+
+    - name: Executar testes com Cypress
+      run: npx cypress run
